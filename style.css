@@ -1,0 +1,191 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+/* Set a stylish background for the whole page */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #e0eafc, #cfdef3); /* Gradient Background */
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(to right, #007BFF, #00d2ff);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  position: relative;
+  /*border-radius: 0 0 20px 20px;*/
+}
+
+header .logo {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em;
+}
+
+/* Filters Section Styles */
+.filters {
+  padding: 20px;
+  background: #ffffff;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.filters:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  background-color: #f9f9f9;
+}
+
+.filters h2 {
+  width: 100%;
+  margin-top: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  color: #1a73e8;
+  border-bottom: 2px solid #1a73e8;
+  padding-bottom: 10px;
+}
+
+.filter-item {
+  flex: 1 1 calc(50% - 20px);
+  min-width: 250px;
+}
+
+.filters label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.filters select, .filters input[type="checkbox"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px; /* Rounded corners for inputs and selects */
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  font-size: 1em;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.filters select {
+  background-color: #f0f0f0;
+  border-color: #ccc;
+}
+
+.filters select:focus {
+  border-color: #1a73e8;
+  background-color: #ffffff;
+  outline: none;
+}
+
+.filters input[type="checkbox"] {
+  width: auto;
+  margin-right: 12px;
+  margin-left: 0;
+}
+
+.filters input[type="checkbox"] + label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: #333;
+}
+
+.filters input[type="checkbox"] + label::before {
+  content: "◻️ ";
+  color: #ddd;
+  margin-right: 8px;
+  transition: color 0.3s ease;
+}
+
+.filters input[type="checkbox"]:checked + label::before {
+  content: "✔️ ";
+  color: #1a73e8;
+}
+
+/* Reviews Section Styles */
+.reviews {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.review {
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px; /* Rounded corners for review boxes */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.review:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
+}
+
+.review h3 {
+  margin-top: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8em;
+  color: #1a73e8;
+}
+
+.rating {
+  color: #ffbb33;
+  font-size: 1.5em;
+}
+
+.use-category {
+  font-style: italic;
+  color: #555;
+}
+
+.review-date, .buy-date {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 10px;
+}
+
+.reviewer-stats {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .filter-item {
+    flex: 1 1 100%;
+  }
+}
